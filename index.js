@@ -24,12 +24,14 @@ const SegundosMinuto= 60;
 let MasaCorporal = Peso/(Altura*Altura)
 console.log("El Imc de " + Nombre+" es " + MasaCorporal)
 
-let Diasvividos = Edad * (365 * Meses /12);
+let Diasvividos = Edad * (365 * Meses /12)
 console.log(Nombre+" Ha vivido "+Diasvividos+ "dias")
 
-let minutosmes = 30*HorasDia*MinutosHora;
+let minutosmes = 30*HorasDia*MinutosHora
 console.log ("Un mes tiene "+ minutosmes +" minutos")
 
+let segudosemanas = DiaSemana*HorasDia*MinutosHora*SegundosMinuto
+console.log ("Hay"+ segudosemanas + "Segundos por semanas")
 
 
 //Operador  Ternario
@@ -42,3 +44,9 @@ console.log(Nombre+"tiene de cancion favorita"+Esfan)
 
 let Tienehermanos= Numerodehermanos >= 2 ? "Tiene varios hermanos ": "Tiene uno o ningun hermano"
 console.log(Nombre+"Tiene "+Tienehermanos)
+
+let comidafav = ComidaFavorita === "sushi"? "Si es su comida favorita":"No es su comida favorita"
+console.log("la comida favorita de : "+Nombre +" es "+ comidafav)
+
+let colorfav = Colorfavorito === "Rosa" ? "Si su color favorito es rosa": "No , su color favorito no es el rosa "
+console.log ("El color favorito de :" +Nombre+ "es :"+colorfav+)
