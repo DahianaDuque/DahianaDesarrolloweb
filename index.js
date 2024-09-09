@@ -49,4 +49,4 @@ let comidafav = ComidaFavorita === "sushi"? "Si es su comida favorita":"No es su
 console.log("la comida favorita de : "+Nombre +" es "+ comidafav)
 
 let colorfav = Colorfavorito === "Rosa" ? "Si su color favorito es rosa": "No , su color favorito no es el rosa "
-console.log ("El color favorito de :" +Nombre+ "es :"+colorfav+)
+console.log ("El color favorito de :" +Nombre+ "es :"+colorfav)
