@@ -27,3 +27,28 @@ console.log(preciosfor)
 //.ForEach
 nombres.forEach(nombres => console.log(nombres))
 
+edades.forEach((edad, index, arr) => arr[index] = edad + 1);
+console.log(edades);
+
+//Funciones flecha
+
+//Funcion con 0 parametros 
+const saludo = () => "Hola!"
+console.log(saludo())
+
+//Funcion con 1 parametros
+const numerocuadrado = num => num* num
+console.log(cuadrado(6))
+
+//Funcion con 2 parametros
+const sum = (a,b,c) => a+b
+console.log(sum(6,7))
+
+//Funcion con mas de 2 parametros
+ const message = (nombre,edad,color) => `${nombre},tiene ${edad} de edad y su color favorito es el ${color} `
+ console.log(message("Biatriz","33","Azul"))
+
+ //Funcion con valor por defecto
+
+ const multi = (a,b =2) => a*b
+ console.log(multi(5))
