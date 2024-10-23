@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenedor">
+        <h1 id="text">Usuarios en la empresa!</h1>
+        <button id="btonmostrar">Presioname jijiji</button>
+    </div>
+
+    <script>
+        class User {
+        constructor (nombre,edad){
+            this.nombre = nombre;
+            this.edad=edad;
+        }
+        }
+        class Administrador  extends User{
+            constructor(nombre,edad){
+            super (nombre,edad);
+            }
+
+            showmensaje(){
+                return(`Soy ${this.nombre}, tengo ${this.edad} y soy el que limpia en la empresa`)
+            }
+        }
+        class Comercial extends User {
+            constructor(nombre,edad){
+             super (nombre,edad);
+            }
+            showmensaje(){
+                return (`Soy ${this.nombre} tengo ${this.edad} y soy el contador de la empresa`)
+            }
+        }
+
+        const admin = new Administrador("Jorge",40)
+        const comercio = new Comercial("Juliana", 38); 
+
+
+        
+        const btonmostrar = document.getElementById("btonmostrar");
+
+        if (btonmostrar) {
+           
+            btonmostrar.addEventListener("click", () => {
+              
+                const pAdmin = document.createElement("p");
+                pAdmin.textContent = admin.showmensaje();
+
+              
+                const pComercio = document.createElement("p");
+                pComercio.textContent = comercio.showmensaje();
+
+                
+                const contenedor = document.getElementById("contenedor");
+                contenedor.appendChild(pAdmin);
+                contenedor.appendChild(pComercio);
+            });
+        } else {
+            console.error("No se encontró el botón en el DOM.");
+        }
+
+
+    </script>
+    
+</body>
+</html>
